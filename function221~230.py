@@ -96,15 +96,80 @@ vartest(3)
 
 
 # 226
+"""
+입력 문자열을 한 줄에 다섯글자씩 출력하는 print_5xn(string) 함수
+print_5xn("아이엠어보이유알어걸")
+아이엠어보
+이유알어걸
+"""
 
 
+def print_5xn(line):
+    # 1
+    print(line[:5])
+    print(line[5:])
+    # 2
+    chunk_num = int(len(line) / 5)
+    print("chunk_num: ", chunk_num)
+    for x in range(chunk_num + 1):
+        print("x:", x)
+        print(line[x * 5: x * 5 + 5])
 
 
+print_5xn("아이엠어보이유알어걸히이즈어몬스터")
+
+# 227
+"""
+문자열과 한줄에 출력될 글자 수를 입력을 받아 한 줄에 입력된 글자 수만큼 출력하는 print_mxn(string) 함수를 작성
+print("아이엠어보이유알어걸", 3)
+"""
 
 
+def print_mxn(line, b):
+    c = int(len(line)/b)
+    for i in range(c+1):
+        print(line[i*b:i*b+b])
 
 
+print_mxn("아이엠어보이유알어걸", 3)
 
+# 228
+"""
+연봉을 입력받아 월급을 계산하는 calc_monthly_salary(annual_salary) 함수를 정의하라. 
+회사는 연봉을 12개월로 나누어 분할 지급하며, 이 때 1원 미만은 버림
+calc_monthly_salary(12000000)
+1000000
+"""
+print("------------")
+
+
+def calc_monthly_salary(a):
+    # print(annual_salary/12)
+    sal = int(a/12)
+    return print(sal)
+
+
+calc_monthly_salary(12000000)
+
+
+# 229
+print("------------")
+"""
+코드의 실행결과 예측하라.
+"""
+
+
+def my_print(a, b):
+    print("왼쪽:", a)
+    print("오른쪽:", b)
+
+
+# 1
+my_print(a=100, b=200)
+# 2
+my_print(100, 200)
+# 3
+my_print(b=100, a=200)
 
 
 
